@@ -1,0 +1,78 @@
+@import "${framework(TEI P5)}/xml/tei/css/tei_oxygen.css";
+@import "common-project.css";
+
+
+teiHeader {
+    display: none;
+}
+
+anchor {
+    content: "⚓";
+    color: blue;
+    -oxy-display-tags: none;
+}
+
+app {
+    display: inline ;
+}
+
+listApp {
+    display: block;
+}
+
+listApp:before {
+    content: "Apparatus " attr(type) attr(n);
+    display: block;
+    font-weight: 900;
+}
+
+listApp > app {
+    display: block;
+}
+
+listApp > app > lem {
+    color: darkgreen;
+}
+
+listApp > app > lem:after {
+    content: " ] ";
+}
+
+listApp > app > rdg {
+    display: inline;
+    -oxy-display-tags: none;
+    color: darkblue;
+}
+
+listApp > app > rdg:before {
+    content: "";
+}
+
+listApp > app > rdg:after {
+    content: ": " attr(wit);
+    color: red;
+}
+
+noteGrp {
+    display: block;
+}
+
+noteGrp > note {
+    display: block;
+}
+
+spanGrp {
+    display: block;
+}
+
+spanGrp > span {
+    display: block;
+}
+
+interpGrp {
+    display: block;
+}
+
+interpGrp > interp {
+    display: block;
+}

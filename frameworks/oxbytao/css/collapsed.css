@@ -1,0 +1,20 @@
+@import "common.css";
+@import "collapsed-project.css";
+
+anchor {
+    display: none;
+}
+
+app,lem {
+    -oxy-display-tags: none;
+    color:gray;
+}
+
+app > rdg {
+    display: none;
+}
+
+choice {
+    -oxy-display-tags: none;
+    color: gray;
+}

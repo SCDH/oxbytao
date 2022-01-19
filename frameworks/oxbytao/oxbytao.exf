@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script xmlns="http://www.oxygenxml.com/ns/framework/extend"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/framework/extend http://www.oxygenxml.com/ns/framework/extend/frameworkExtensionScript.xsd"
+  base="oXbytei">
+  <name>oXbytao</name>
+  <description>oXbytei with Add-Ons</description>
+  <priority>Normal</priority>
+
+  <author>
+
+    <css>
+      <addCss path="${framework(oXbytao)}/css/collapsed.css" title="Collapsed"/>
+      <addCss path="${framework(oXbytao)}/css/expanded.css" title="Expanded"/>
+      <addCss path="${framework(oXbytao)}/css/header.css" title="+Header" alternate="true"/>
+      <addCss path="${framework(oXbytao)}/css/edit.css" title="+Edit" alternate="true"/>
+    </css>
+
+  </author>
+
+</script>
