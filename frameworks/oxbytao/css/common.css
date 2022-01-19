@@ -9,11 +9,12 @@ teiHeader {
 anchor {
     content: "⚓";
     color: blue;
+    background-color: lightgray;
     -oxy-display-tags: none;
 }
 
 app {
-    display: inline ;
+    display: inline;
 }
 
 listApp {
@@ -24,10 +25,33 @@ listApp:before {
     content: "Apparatus " attr(type) attr(n);
     display: block;
     font-weight: 900;
+    font-size: 1.1em;
 }
 
 listApp > app {
     display: block;
+}
+
+app[from]:before {
+    -oxy-link: attr(from);
+    content: "↦";
+    color: blue;
+    background-color: lightgray;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-right: 0.5em;
+}
+
+app[to]:before {
+    -oxy-link: attr(to);
+    content: "↤";
+    color: blue;
+    background-color: lightgray;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-right: 0.5em;
 }
 
 listApp > app > lem {
