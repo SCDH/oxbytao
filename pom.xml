@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.wwu.scdh.oxbytao</groupId>
+    <artifactId>oxbytao</artifactId>
+    <version>0.1.0</version>
+
+    <name>oXbytao</name>
+    <url>https://github.com/scdh/oxbytao</url>
+
+    <developers>
+	<developer>
+	    <name>Christian Lück</name>
+	    <organization>SCDH, University of Münster</organization>
+	</developer>
+    </developers>
+
+    <organization>
+	<name>Service Center of Digital Humanities, ULB, University of Münster</name>
+	<url>https://www.uni-muenster.de/SCDH/</url>
+    </organization>
+
+    <licenses>
+	<license>
+	    <name>GNU General Public License, version 3</name>
+	    <url>https://gplv3.fsf.org/</url>
+	</license>
+    </licenses>
+
+    <scm>
+	<connection>scm:git:https://github.com/scdh/oxbytao.git</connection>
+	<developerConnection>scm:git:https://github.com/scdh/oxbytao.git</developerConnection>
+	<url>scm:git:https://github.com/scdh/oxbytao.git</url>
+	<tag>HEAD</tag>
+    </scm>
+
+    <properties>
+	<saxon.version>10.2</saxon.version>
+    </properties>
+
+    <dependencies>
+	<dependency>
+	    <groupId>net.sf.saxon</groupId>
+	    <artifactId>Saxon-HE</artifactId>
+	    <version>${saxon.version}</version>
+	</dependency>
+    </dependencies>
+
+    <build>
+
+	<plugins>
+
+	    <!-- make framework package -->
+	    <plugin>
+		<artifactId>maven-assembly-plugin</artifactId>
+		<version>2.4</version>
+		<executions>
+		    <execution>
+			<id>make-assembly</id>
+			<phase>package</phase>
+			<goals>
+			    <goal>single</goal>
+			</goals>
+			<configuration>
+			    <finalName>${project.artifactId}-${project.version}</finalName>
+			    <archiveBaseDirectory>${project.basedir}</archiveBaseDirectory>
+			    <descriptors>
+				<descriptor>assembly.xml</descriptor>
+			    </descriptors>
+			</configuration>
+		    </execution>
+		</executions>
+	    </plugin>
+
+	    <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>xml-maven-plugin</artifactId>
+		<version>1.0.2</version>
+		<executions>
+		    <execution>
+			<goals>
+			    <goal>transform</goal>
+			</goals>
+		    </execution>
+		</executions>
+		<configuration>
+		    <transformationSets>
+			<!-- make a package descriptor using information from this pom.xml -->
+			<transformationSet>
+			    <dir>${project.basedir}</dir>
+			    <includes>
+				<include>pom.xml</include>
+			    </includes>
+			    <stylesheet>pages/descriptor.xsl</stylesheet>
+			</transformationSet>
+		    </transformationSets>
+		</configuration>
+		<dependencies>
+		    <dependency>
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>Saxon-HE</artifactId>
+			<version>${saxon.version}</version>
+		    </dependency>
+		</dependencies>
+	    </plugin>
+
+	</plugins>
+    </build>
+
+</project>
