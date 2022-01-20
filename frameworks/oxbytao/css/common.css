@@ -34,24 +34,12 @@ listApp > app {
 }
 
 app[from]:before {
-    -oxy-link: attr(from);
-    content: "↦";
-    color: blue;
-    background-color: lightgray;
-    text-decoration: underline;
-    font-weight: 400;
-    font-size: small;
+    content: oxy_button(actionID, "highlight.referenced", transparent, true);
     margin-right: 0.5em;
 }
 
 app[to]:before {
-    -oxy-link: attr(to);
-    content: "↤";
-    color: blue;
-    background-color: lightgray;
-    text-decoration: underline;
-    font-weight: 400;
-    font-size: small;
+    content: oxy_button(actionID, "highlight.referenced", transparent, true);
     margin-right: 0.5em;
 }
 
@@ -61,6 +49,10 @@ listApp > app > lem {
 
 listApp > app > lem:after {
     content: " ] ";
+}
+
+listApp > app > lem[wit]:after {
+    content: ": " attr(wit) " ] ";
 }
 
 listApp > app > rdg {
@@ -112,8 +104,26 @@ spanGrp {
     display: block;
 }
 
+spanGrp:before {
+    content: "Annotations " attr(type) attr(n);
+    display: block;
+    font-weight: 900;
+    font-size: large;
+    margin-top: 0.5ex;
+}
+
 spanGrp > span {
     display: block;
+}
+
+span[from]:before {
+    content: oxy_button(actionID, "highlight.referenced", transparent, true) " " attr(ana);
+    margin-right: 0.5em;
+}
+
+span[to]:before {
+    content: oxy_button(actionID, "highlight.referenced", transparent, true) " " attr(ana);
+    margin-right: 0.5em;
 }
 
 interpGrp {
