@@ -19,6 +19,7 @@
     <toolbars>
       <toolbar>
         <separator anchor="sel.wit"/>
+        <addAction anchor="sel.wit" id="highlight.referenced"/>
         <separator anchor="sel.wit"/>
         <addAction anchor="sel.wit" id="corr"/>
         <addAction anchor="sel.wit" id="sic"/>
@@ -31,6 +32,8 @@
 
     <menu>
       <separator anchor="sel.wit"/>
+      <addAction anchor="sel.wit" id="highlight.referenced"/>
+      <separator anchor="sel.wit"/>
       <addAction anchor="sel.wit" id="corr"/>
       <addAction anchor="sel.wit" id="sic"/>
       <addAction anchor="sel.wit" id="wrap.choice"/>
@@ -41,6 +44,8 @@
 
     <contextualMenu>
       <submenu name="TEI">
+        <separator/>
+        <addAction id="highlight.referenced"/>
         <separator/>
         <addAction id="corr"/>
         <addAction id="sic"/>
