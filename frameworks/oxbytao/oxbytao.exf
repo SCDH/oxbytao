@@ -16,6 +16,31 @@
       <addCss path="${framework(oXbytao)}/css/edit.css" title="+Edit" alternate="true"/>
     </css>
 
+    <toolbars>
+      <toolbar>
+        <separator/>
+        <addAction id="note"/>
+      </toolbar>
+    </toolbars>
+
+    <menu>
+      <separator anchor="annotate"/>
+      <addAction anchor="annotate" id="note"/>
+    </menu>
+
+    <contextualMenu>
+      <submenu name="TEI">
+        <separator/>
+        <addAction id="note"/>
+      </submenu>
+    </contextualMenu>
+
+    <contentCompletion>
+      <authorActions>
+        <addAction id="note" inElementsView="true" inCCWindow="true"/>
+      </authorActions>
+    </contentCompletion>
+
   </author>
 
 </script>
