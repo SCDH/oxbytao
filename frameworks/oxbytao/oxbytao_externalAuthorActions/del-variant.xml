@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- An author mode action for deleting a apparatus entry.
+  It let's the user choose which reading is to be kept. -->
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="del.app">
+  <a:name>Delete variants</a:name>
+  <a:description>Choose which text to keep and delete all variants (alternatives) at point.</a:description>
+  <a:smallIconPath href="${framework(oXbytao)}/images/sheetsX-16.png"/>
+  <a:largeIconPath href="${framework(oXbytao)}/images/sheetsX-24.png"/>
+  <a:operations>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>ancestor-or-self::*:app and //variantEncoding[@method eq 'parallel-segmentation']</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="externalParams"><![CDATA[keep=${ask('Choose reading to keep:', combobox, (${xpath_eval(string-join(for $el in ancestor-or-self::*:app/*[self::*:lem or self::*:rdg] return concat("'", count($el/preceding-sibling::*)+1, "':'", count($el/preceding-sibling::*)+1, ', ', $el/@wit, ': ', $el, "'"), ';'))}), '1')}]]></a:argument>
+        <a:argument name="script">${framework(oXbytao)}/xsl/del-app.xsl</a:argument>
+        <a:argument name="source-location">ancestor-or-self::*:app[1]</a:argument>
+        <a:argument name="target-location">ancestor-or-self::*:app[1]</a:argument>
+        <a:argument name="action">Replace</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:accessKey/>
+</a:authorAction>
