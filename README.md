@@ -17,6 +17,16 @@ did not go to oXbytei directly.
 
 - CSS styles, that can simply be extended on a project level without
   writing your own framework
+- some author mode actions that are to trivial or too opinionated for
+  oXbytei
+  - append a `<rdg>` to an apparatus entry
+  - delete an apparatus entry
+  - `<note>`
+  - `<gap>`
+  - `<unclear>`
+  - `<sic>`
+  - `<corr>`
+  - wrap elements into `<choice>` and unwrap
 
 ## Requirements ##
 
