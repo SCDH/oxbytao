@@ -6,10 +6,6 @@ lem {
     -oxy-display-tags: none;
 }
 
-rdg::before {
-    content:'|';
-}
-
 rdg {
     color: blue ;
     -oxy-display-tags: none;
