@@ -11,7 +11,7 @@ STATE: development, experimental
 
 ## About oXbytao ##
 
-oXbytao is [**oXbyt**ei]() with **a**dd-**o**ns.
+oXbytao is [**oXbyt**ei](https://github.com/scdh/oxbytei) with **a**dd-**o**ns.
 
 - CSS styles, that can simply be extended on a project level without
   writing your own framework
