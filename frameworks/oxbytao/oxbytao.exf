@@ -18,6 +18,7 @@
 
     <toolbars>
       <toolbar>
+        <addAction anchor="sel.wit" id="del.app"/>
         <separator anchor="sel.wit"/>
         <addAction anchor="sel.wit" id="highlight.referenced"/>
         <separator anchor="sel.wit"/>
@@ -31,6 +32,7 @@
     </toolbars>
 
     <menu>
+      <addAction anchor="sel.wit" id="del.app"/>
       <separator anchor="sel.wit"/>
       <addAction anchor="sel.wit" id="highlight.referenced"/>
       <separator anchor="sel.wit"/>
@@ -44,6 +46,7 @@
 
     <contextualMenu>
       <submenu name="TEI">
+        <addAction id="del.app"/>
         <separator/>
         <addAction id="highlight.referenced"/>
         <separator/>
