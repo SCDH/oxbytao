@@ -5,8 +5,8 @@
   id="note">
   <a:name>Note</a:name>
   <a:description>Inserts a note.</a:description>
-  <a:largeIconPath href="${framework(oXbytei)}/images/comment-24.png"/>
-  <a:smallIconPath href="${framework(oXbytei)}/images/comment-16.png"/>
+  <a:largeIconPath href="${framework(oXbytao)}/images/comment-24.png"/>
+  <a:smallIconPath href="${framework(oXbytao)}/images/comment-16.png"/>
   <a:operations>
     <a:operation id="ExecuteMultipleActionsOperation">
       <a:xpathCondition>true()</a:xpathCondition>
