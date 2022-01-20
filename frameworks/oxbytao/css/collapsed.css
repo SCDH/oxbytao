@@ -5,8 +5,12 @@ anchor {
     display: none;
 }
 
-app,
-lem {
+app {
+    -oxy-display-tags: none;
+    display: oxy_xpath("if (exists(//variantEncoding[@method eq 'parallel-segmentation'])) then 'inline' else 'none'", processChangeMarkers, true, evaluate, dynamic);
+}
+
+app > lem {
     -oxy-display-tags: none;
     color: gray;
 }
