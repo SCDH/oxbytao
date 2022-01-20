@@ -62,18 +62,6 @@ XML catalog:
   style
 - **edit-project.css**: local CSS definitions used in *+Edit* style
 
-E.g. when using an *internal location-referenced* or an *internal
-double end-point attached* apparatus, then for the collapsed view it
-will be desirable to hide `app/lem` which duplicates a portion of your
-text. (Unfortuately the encoding variant cannot be looked up from the
-header with current CSS selection mechanisms.) In this case, it would
-be a good idea to put something like this in `collapsed-project.css`:
-
-```{css}
-lem {
-	display: none;
-}
-```
 
 
 Note: If you want to re-define styles already defined, then you can
