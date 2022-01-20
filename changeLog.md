@@ -3,7 +3,9 @@
 ## 0.2.0 ##
 
 - new action for highlighting text referenced by anchor-based markup
-  - this simplyfies navigation and orientation in anchor based markup 
+  - e.g. highlight the portion text that an external double end-doint
+    attached apparatus entry points to
+  - this greatly simplyfies navigation and orientation in anchor based markup
 - switch the display mode of `<lem>` in CSS depending on the method
   of variant encoding
   - In the *Collapsed* CSS style `<lem>` is only displayed for
