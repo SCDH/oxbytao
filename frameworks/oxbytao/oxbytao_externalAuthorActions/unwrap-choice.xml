@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- An author action for unwrapping a choice element and preserving its content.
+-->
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="unwrap-choice">
+  <a:name>Unwrap choice</a:name>
+  <a:description>Remove a choice element and preserve its content following reasonable rules</a:description>
+  <a:smallIconPath href="${framework(oXbytao)}/images/unchoice-16.png"/>
+  <a:largeIconPath href="${framework(oXbytao)}/images/unchoice-24.png"/>
+  <a:operations>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>
+        ancestor::*:choice[1][*:sic/*:app]
+      </a:xpathCondition>
+      <a:arguments>
+        <!-- Note: We cannot use position() in the construction of the combobox values, so we count the preceding siblings. -->
+        <a:argument name="externalParams"><![CDATA[keep=${ask('Choose reading for lemma:', combobox, (${xpath_eval(string-join(for $el in ancestor::*:choice/*:sic/*:app/* return concat("'", count($el/preceding-sibling::*)+1, "':'", count($el/preceding-sibling::*)+1, ', ', $el/@wit, ': ', $el, "'"), ';'))}), '1')}]]></a:argument>
+        <a:argument name="script">${framework(oXbytao)}/resources/unwrap_choice.xsl</a:argument>
+        <a:argument name="sourceLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="targetLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="action">Replace</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>
+        ancestor::*:choice[1][*:corr] |
+        ancestor::*:choice[1][*:sic]
+      </a:xpathCondition>
+      <a:arguments>
+        <a:argument name="externalParams"><![CDATA[keep=${ask('Choose text to keep:', combobox, (${xpath_eval(concat("'corr':'corr: ", ancestor::*:choice/*:corr, "'", ';', "'sic':'sic: ", ancestor::*:choice/*:sic, "'"))}), 'corr')}]]></a:argument>
+        <a:argument name="script">${framework(oXbytao)}/resources/unwrap_choice.xsl</a:argument>
+        <a:argument name="sourceLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="targetLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="action">Replace</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>
+        ancestor::*:choice[1][*:unclear]
+      </a:xpathCondition>
+      <a:arguments>
+        <!-- Note: We cannot use position() in the construction of the combobox values, so we count the preceding siblings. -->
+        <a:argument name="externalParams"><![CDATA[keep=${ask('Choose text to keep:', combobox, (${xpath_eval(string-join(for $el in ancestor::*:choice/*:unclear return concat("'", count($el/preceding-sibling::*)+1, "':'", count($el/preceding-sibling::*)+1, ': ', $el, "'"), ';'))}), '1')}]]></a:argument>
+        <a:argument name="script">${framework(oXbytao)}/resources/unwrap_choice.xsl</a:argument>
+        <a:argument name="sourceLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="targetLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="action">Replace</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:accessKey/>
+</a:authorAction>
