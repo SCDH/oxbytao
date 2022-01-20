@@ -25,7 +25,8 @@ listApp:before {
     content: "Apparatus " attr(type) attr(n);
     display: block;
     font-weight: 900;
-    font-size: 1.1em;
+    font-size: large;
+    margin-top: 0.5ex;
 }
 
 listApp > app {
@@ -39,7 +40,7 @@ app[from]:before {
     background-color: lightgray;
     text-decoration: underline;
     font-weight: 400;
-    font-size: 0.9em;
+    font-size: small;
     margin-right: 0.5em;
 }
 
@@ -50,7 +51,7 @@ app[to]:before {
     background-color: lightgray;
     text-decoration: underline;
     font-weight: 400;
-    font-size: 0.9em;
+    font-size: small;
     margin-right: 0.5em;
 }
 
@@ -81,8 +82,30 @@ noteGrp {
     display: block;
 }
 
+noteGrp:before {
+    content: "Notes" attr(type) " " attr(n);
+    display: block;
+    font-weight: 900;
+    font-size: large;
+    margin-top: 0.5ex;
+}
+
 noteGrp > note {
     display: block;
+    content: "";
+    color: black;
+    background-color: white;
+}
+
+noteGrp > note[targetEnd]:before, noteGrp[targetEnd]:before {
+    -oxy-link: attr(targetEnd);
+    content: "↤";
+    color: blue;
+    background-color: lightgray;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: small;
+    margin-right: 0.5em;
 }
 
 spanGrp {

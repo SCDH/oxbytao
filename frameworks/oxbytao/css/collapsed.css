@@ -5,13 +5,26 @@ anchor {
     display: none;
 }
 
-app,lem {
+app,
+lem {
     -oxy-display-tags: none;
-    color:gray;
+    color: gray;
 }
 
 app > rdg {
     display: none;
+}
+
+note {
+    display: none;
+}
+
+note:before {
+    display: inline !important;
+    content: "¹";
+    color: blue;
+    background-color: lightgray;
+    -oxy-display-tags: none;
 }
 
 choice {
