@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="markup.note">
+  <a:name>Note</a:name>
+  <a:description>Insert markup for a note.</a:description>
+  <a:operations>
+    <a:operation id="de.wwu.scdh.oxbytei.ExpandingXSLTOperation">
+      <a:xpathCondition>true()</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="script">${framework(oXbytei)}/xsl/note.xsl</a:argument>
+        <a:argument name="action">${teilspProp(oxbytei.action.note.action)}</a:argument>
+        <a:argument name="sourceLocation">${teilspProp(oxbytei.action.note.sourceLocation)}</a:argument>
+        <a:argument name="targetLocation">${teilspProp(oxbytei.action.note.targetLocation)}</a:argument>
+        <a:argument name="externalParams">anchorId=${anchorId},${teilspProp(oxbytei.action.note.externalParams)}</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:accessKey/>
+</a:authorAction>
