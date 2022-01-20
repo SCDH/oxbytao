@@ -22,3 +22,4 @@ target
 test/xspec/xspec
 test/xspec/*.html
 /log4j2.properties
+oxbytei_externalAuthorActions
