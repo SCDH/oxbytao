@@ -1,5 +1,9 @@
 # Change log #
 
+## 0.3.0 ##
+
+- new action for removing all but one variants, choose which one to keep
+
 ## 0.2.0 ##
 
 - new action for highlighting text referenced by anchor-based markup
