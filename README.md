@@ -11,19 +11,19 @@ STATE: development, experimental
 
 ## About oXbytao ##
 
-oXbytao is [**oXbyt**ei]() with **a**dd-**o**ns. These add-ons are
-opinionated. They make assumptions on markup style. That's why they
-did not go to oXbytei directly.
+oXbytao is [**oXbyt**ei]() with **a**dd-**o**ns.
 
 - CSS styles, that can simply be extended on a project level without
   writing your own framework
-- some author mode actions that are to trivial or too opinionated for
+- some author mode actions that are too trivial or too biased to a
+  certain markup style for
   oXbytei
+  - highlight referenced text in anchor-based markup (e.g. the portion
+    of the text referenced by an apparatus entry with external double
+    end-point attached variant encoding)
   - append a `<rdg>` to an apparatus entry
   - delete an apparatus entry
   - `<note>`
-  - `<gap>`
-  - `<unclear>`
   - `<sic>`
   - `<corr>`
   - wrap elements into `<choice>` and unwrap
