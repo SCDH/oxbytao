@@ -1,5 +1,9 @@
 # Change log #
 
+## 0.4.0 ##
+
+- new CSS style named *+Anchors*
+
 ## 0.3.0 ##
 
 - new action for removing all but one variants, choose which one to keep

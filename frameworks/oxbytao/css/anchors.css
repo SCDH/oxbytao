@@ -1,0 +1,12 @@
+@import "anchors-project.css";
+
+anchor,
+milestone
+{
+    display: inline;
+    content: "⚓";
+    color: blue;
+    background-color: lightgray;
+    -oxy-display-tags: none;
+    font-size: smaller;
+}
