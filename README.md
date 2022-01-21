@@ -46,10 +46,10 @@ the following link instead:
 ### CSS ###
 
 oXbytao introduces the CSS styles **Collapsed** and **Expanded**, and
-the additional styles **+Header** and **+Edit**. These can be extended
-on a project level without writing your own framework. There are some
-empty CSS files in the framework, that can simply be replaced by an
-XML catalog:
+the additional styles **+Anchors**, **+Header** and **+Edit**. These
+can be extended on a project level without writing your own
+framework. There are some empty CSS files in the framework, that can
+simply be replaced by an XML catalog:
 
 - **common-project.css**: local CSS definitions used by all the styles
   in oXbytao. You can use this for adding your own project-wide font
@@ -57,6 +57,8 @@ XML catalog:
 - **collapsed-project.css**: local CSS definitions used in *Collapsed*
   style
 - **expanded-project.css**: local CSS definitions used in *Expanded*
+  style
+- **anchors-project.css**: local CSS definitions used in *+Anchors*
   style
 - **header-project.css**: local CSS definitions used in *+Header*
   style
