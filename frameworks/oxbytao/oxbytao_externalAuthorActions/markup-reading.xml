@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- editing atom -->
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="markup.reading">
+  <a:name>Append Variant</a:name>
+  <a:description>Add markup for an other variant</a:description>
+  <a:operations>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>ancestor-or-self::*:app</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><![CDATA[<rdg xmlns="http://www.tei-c.org/ns/1.0">${caret}</rdg>]]></a:argument>
+        <a:argument name="insertLocation">ancestor-or-self::*:app</a:argument>
+        <a:argument name="insertPosition">Inside as last child</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>
