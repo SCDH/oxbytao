@@ -21,13 +21,11 @@
       <toolbar>
         <addAction anchor="sel.wit" position="before" id="reading"/>
         <addAction anchor="sel.wit" id="del.app"/>
-        <separator anchor="sel.wit"/>
-        <addAction anchor="sel.wit" id="highlight.referenced"/>
-        <separator anchor="sel.wit"/>
-        <addAction anchor="sel.wit" id="corr"/>
-        <addAction anchor="sel.wit" id="sic"/>
-        <addAction anchor="sel.wit" id="wrap.choice"/>
-        <addAction anchor="sel.wit" id="unwrap.choice"/>
+        <separator anchor="highlight.referenced"/>
+        <addAction anchor="highlight.referenced" id="corr"/>
+        <addAction anchor="highlight.referenced" id="sic"/>
+        <addAction anchor="highlight.referenced" id="wrap.choice"/>
+        <addAction anchor="highlight.referenced" id="unwrap.choice"/>
         <separator anchor="annotate"/>
         <addAction anchor="annotate" id="note"/>
       </toolbar>
@@ -36,23 +34,19 @@
     <menu>
       <addAction anchor="sel.wit" position="before" id="reading"/>
       <addAction anchor="sel.wit" id="del.app"/>
-      <separator anchor="sel.wit"/>
-      <addAction anchor="sel.wit" id="highlight.referenced"/>
-      <separator anchor="sel.wit"/>
-      <addAction anchor="sel.wit" id="corr"/>
-      <addAction anchor="sel.wit" id="sic"/>
-      <addAction anchor="sel.wit" id="wrap.choice"/>
-      <addAction anchor="sel.wit" id="unwrap.choice"/>
+      <separator anchor="highlight.referenced"/>
+      <addAction anchor="highlight.referenced" id="corr"/>
+      <addAction anchor="highlight.referenced" id="sic"/>
+      <addAction anchor="highlight.referenced" id="wrap.choice"/>
+      <addAction anchor="highlight.referenced" id="unwrap.choice"/>
       <separator anchor="annotate"/>
       <addAction anchor="annotate" id="note"/>
     </menu>
 
     <contextualMenu>
       <submenu name="TEI">
-        <addAction id="reading"/>
-        <addAction id="del.app"/>
-        <separator/>
-        <addAction id="highlight.referenced"/>
+        <addAction anchor="sel.wit" position="before" id="reading"/>
+        <addAction anchor="sel.wit" id="del.app"/>
         <separator/>
         <addAction id="corr"/>
         <addAction id="sic"/>
