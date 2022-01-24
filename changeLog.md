@@ -2,7 +2,10 @@
 
 ## 0.4.0 ##
 
+- new action for appending another reading
 - new CSS style named *+Anchors*
+- moved the navigation action from 0.2.0 to oXbytei
+- order of toolbar and menu entries
 
 ## 0.3.0 ##
 
