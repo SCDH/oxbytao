@@ -7,6 +7,10 @@
   <description>oXbytei with Add-Ons</description>
   <priority>Normal</priority>
 
+  <documentTemplates inherit="all">
+    <addEntry path="${pdu}/templates" position="before"/>
+  </documentTemplates>
+
   <author>
 
     <css>

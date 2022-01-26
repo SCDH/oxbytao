@@ -1,5 +1,10 @@
 # Change log #
 
+## 0.5.0 ##
+
+- templates directory in `${pdu}/templates`, i.e. the directory
+  `templates` in your project
+
 ## 0.4.0 ##
 
 - new action for appending another reading
