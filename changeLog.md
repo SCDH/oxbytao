@@ -1,5 +1,9 @@
 # Change log #
 
+## 0.5.1 ##
+
+- fix link to templates directory
+
 ## 0.5.0 ##
 
 - templates directory in `${pdu}/templates`, i.e. the directory

@@ -8,7 +8,7 @@
   <priority>Normal</priority>
 
   <documentTemplates inherit="all">
-    <addEntry path="${pdu}/templates" position="before"/>
+    <addEntry path="${pd}/templates" position="before"/>
   </documentTemplates>
 
   <author>
