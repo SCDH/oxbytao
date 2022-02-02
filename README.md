@@ -16,8 +16,7 @@ oXbytao is [**oXbyt**ei](https://github.com/scdh/oxbytei) with **a**dd-**o**ns.
 - CSS styles, that can simply be extended on a project level without
   writing your own framework
 - some author mode actions that are too trivial or too biased to a
-  certain markup style for
-  oXbytei
+  certain markup style for oXbytei
   - highlight referenced text in anchor-based markup (e.g. the portion
     of the text referenced by an apparatus entry with external double
     end-point attached variant encoding)
@@ -27,6 +26,8 @@ oXbytao is [**oXbyt**ei](https://github.com/scdh/oxbytei) with **a**dd-**o**ns.
   - `<sic>`
   - `<corr>`
   - wrap elements into `<choice>` and unwrap
+  - templates directory in `${pd}/templates`, i.e. the directory named
+    `templates` in the root folder of your oXygen project.
 
 ## Requirements ##
 
