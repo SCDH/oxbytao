@@ -1,5 +1,9 @@
 # Change log #
 
+## 0.5.2 ##
+
+- fix action for deleting an apparatus entry
+
 ## 0.5.1 ##
 
 - fix link to templates directory

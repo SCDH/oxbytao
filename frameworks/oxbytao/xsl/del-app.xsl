@@ -11,7 +11,7 @@
     <xsl:template match="/">
         <xsl:message>Keeping variant <xsl:value-of select="$keep"/></xsl:message>
         <xsl:message>root: <xsl:value-of select="local-name(oxy:current-element())"/></xsl:message>
-        <xsl:apply-templates select="oxy:current-element()"/>
+        <xsl:apply-templates select="app"/>
     </xsl:template>
 
     <xsl:template match="app">

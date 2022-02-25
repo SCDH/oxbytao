@@ -15,8 +15,8 @@
       <a:arguments>
         <a:argument name="externalParams"><![CDATA[keep=${ask('Choose reading to keep:', combobox, (${xpath_eval(string-join(for $el in ancestor-or-self::*:app/*[self::*:lem or self::*:rdg] return concat("'", count($el/preceding-sibling::*)+1, "':'", count($el/preceding-sibling::*)+1, ', ', $el/@wit, ': ', $el, "'"), ';'))}), '1')}]]></a:argument>
         <a:argument name="script">${framework(oXbytao)}/xsl/del-app.xsl</a:argument>
-        <a:argument name="source-location">ancestor-or-self::*:app[1]</a:argument>
-        <a:argument name="target-location">ancestor-or-self::*:app[1]</a:argument>
+        <a:argument name="sourceLocation">ancestor-or-self::*:app[1]</a:argument>
+        <a:argument name="targetLocation">ancestor-or-self::*:app[1]</a:argument>
         <a:argument name="action">Replace</a:argument>
       </a:arguments>
     </a:operation>
