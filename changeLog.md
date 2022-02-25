@@ -1,5 +1,9 @@
 # Change log #
 
+## 0.5.3 ##
+
+- CSS for collapsed: hide apparatus if empty `<lem>`
+
 ## 0.5.2 ##
 
 - fix action for deleting an apparatus entry

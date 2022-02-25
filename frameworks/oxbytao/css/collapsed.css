@@ -19,6 +19,10 @@ app > rdg {
     display: none;
 }
 
+app:has(lem:empty) {
+    display: none;
+}
+
 note {
     display: none;
 }
