@@ -1,6 +1,8 @@
 @import "${framework(TEI P5)}/xml/tei/css/tei_oxygen.css";
 @import "common-project.css";
 
+@namespace xml "http://www.w3.org/XML/1998/namespace";
+
 
 teiHeader,
 teiHeader > * {
@@ -120,10 +122,28 @@ span[to]:before {
     margin-right: 0.5em;
 }
 
+
+/* taxonomies and interpGrps */
+
 interpGrp {
     display: block;
 }
 
 interpGrp > interp {
     display: block;
+}
+
+taxonomy,
+category,
+interpGrp,
+interp {
+    padding-left: 1em;
+}
+
+/* show IDs of taxonomies and categories */
+taxonomy[xml|id]:before,
+category[xml|id]:before,
+interpGrp[xml|id]:before,
+interp[xml|id]:before {
+    content:"#" attr(xml|id) ": ";
 }
