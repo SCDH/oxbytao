@@ -43,6 +43,7 @@
       <addAction anchor="highlight.referenced" id="sic"/>
       <addAction anchor="highlight.referenced" id="wrap.choice"/>
       <addAction anchor="highlight.referenced" id="unwrap.choice"/>
+      <addAction anchor="annotate" id="report.changes"/>
       <separator anchor="annotate"/>
       <addAction anchor="annotate" id="note"/>
     </menu>
