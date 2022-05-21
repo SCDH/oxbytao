@@ -1,8 +1,11 @@
 # Change log #
 
-## 0.5.5 ##
+## 0.6.0 ##
 
-- CSS: additions to 0.5.4
+- new author action for reporting changes
+- show nested structures of `<taxonomy>` and `<interpGrp>` by CSS
+- show `xml:id` of taxonomies and categories
+- CSS additions to 0.5.4
 
 ## 0.5.4 ##
 
