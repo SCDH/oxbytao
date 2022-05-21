@@ -1,6 +1,6 @@
 @import "header-project.css";
 
-teiHeader {
-    visibility: visible;
-    font-size: unset;
+teiHeader,
+teiHeader > * {
+    display: block;
 }

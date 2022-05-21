@@ -1,5 +1,9 @@
 # Change log #
 
+## 0.5.5 ##
+
+- CSS: additions to 0.5.4
+
 ## 0.5.4 ##
 
 - CSS: do not set `visiblity` for header, but `display`
