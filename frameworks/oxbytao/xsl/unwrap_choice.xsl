@@ -40,6 +40,17 @@
         </xsl:choose>
     </xsl:template>
 
+    <xsl:template match="choice[child::seg/@source]">
+        <xsl:choose>
+            <xsl:when test="exists(child::*[number($keep)])">
+                <xsl:copy-of select="child::*[number($keep)]/node()"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message terminate="yes">ERROR: element no <xsl:value-of select="$keep"/> does not exist. Aborting operation</xsl:message>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
     <xsl:template match="choice[child::sic/app]">
         <xsl:choose>
             <xsl:when test="exists(sic/app/*[number($keep)])">
