@@ -14,11 +14,11 @@
   <author>
 
     <css>
-      <addCss path="${framework(oXbytao)}/css/collapsed.css" title="Collapsed"/>
-      <addCss path="${framework(oXbytao)}/css/expanded.css" title="Expanded"/>
-      <addCss path="${framework(oXbytao)}/css/anchors.css" title="+Anchors" alternate="true"/>
-      <addCss path="${framework(oXbytao)}/css/header.css" title="+Header" alternate="true"/>
-      <addCss path="${framework(oXbytao)}/css/edit.css" title="+Edit" alternate="true"/>
+      <addCss path="${framework(oXbytao)}/css/collapsed_.css" title="Collapsed"/>
+      <addCss path="${framework(oXbytao)}/css/expanded_.css" title="Expanded"/>
+      <addCss path="${framework(oXbytao)}/css/anchors_.css" title="+Anchors" alternate="true"/>
+      <addCss path="${framework(oXbytao)}/css/header_.css" title="+Header" alternate="true"/>
+      <addCss path="${framework(oXbytao)}/css/edit_.css" title="+Edit" alternate="true"/>
     </css>
 
     <toolbars>
