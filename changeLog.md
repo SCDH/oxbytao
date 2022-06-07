@@ -1,6 +1,6 @@
 # Change log #
 
-## dev
+## 0.6.1 ##
 
 - extended `unwrap.choice` for unwrapping `choice/seg[@source]` from
   multiple recensions editing
