@@ -3,8 +3,8 @@
                xmlns:xt="http://www.oxygenxml.com/ns/extension"
                xsi:schemaLocation="http://www.oxygenxml.com/ns/extension http://www.oxygenxml.com/ns/extension/extensions.xsd">
    <xt:extension id="oxbytao">
-      <xt:location href="https://github.com/SCDH/oxbytao/releases/download/0.6.0/oxbytao-0.6.0-package.zip"/>
-      <xt:version>0.6.0</xt:version>
+      <xt:location href="https://github.com/SCDH/oxbytao/releases/download/0.6.1/oxbytao-0.6.1-package.zip"/>
+      <xt:version>0.6.1</xt:version>
       <xt:oxy_version>23.1+</xt:oxy_version>
       <xt:type>framework</xt:type>
       <xt:author>Christian Lück</xt:author>
@@ -19,7 +19,7 @@
                   <p>oXbytao is <a href="https://github.com/SCDH/oxbytei">
                         <b>oXbyt</b>ei</a> with <b>a</b>dd-<b>o</b>ons. It is an &lt;oXygen/&gt; framework for editing TEI documents,
 									developed at SCDH, Westfälische Wilhelms-Universität Münster.</p>
-                  <p>Visit the <a href="https://github.com/SCDH/oxbytao/releases/tag/0.6.0">release page</a> to see what's new.</p>
+                  <p>Visit the <a href="https://github.com/SCDH/oxbytao/releases/tag/0.6.1">release page</a> to see what's new.</p>
                   <p>Copyright (c) 2021, 2022 Christian Lück</p>
                   <p>This program is free software: you can redistribute it and/or
 									modify it under the terms of the GNU General Public License as
