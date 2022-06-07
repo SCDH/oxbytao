@@ -1,0 +1,14 @@
+/* make @wit editable */
+lem:before,
+rdg:before,
+witDetail:before {
+  background-color: inherit;
+  content:
+    " ["
+    oxy_popup(
+      edit, "@wit",
+      values, oxy_xpath("let $witnesses := /TEI/teiHeader//witness/@xml:id ! concat('#', .) return string-join($witnesses, ',')"),
+      labels, oxy_xpath("let $witnesses := /TEI/teiHeader//witness/@xml:id ! concat('#', .) return string-join($witnesses, ',')")
+      )
+    "] " !important;
+}
