@@ -1,6 +1,3 @@
-@import "${framework(TEI P5)}/xml/tei/css/tei_oxygen.css";
-@import "common-project.css";
-
 @namespace xml "http://www.w3.org/XML/1998/namespace";
 
 

@@ -1,5 +1,11 @@
 # Change log #
 
+## dev
+
+- extended `unwrap.choice` for unwrapping `choice/seg[@source]` from
+  multiple recensions editing
+- enabled overriding CSS for all styles
+
 ## 0.6.0 ##
 
 - new author action for reporting changes

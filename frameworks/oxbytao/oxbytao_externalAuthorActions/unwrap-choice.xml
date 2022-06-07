@@ -49,6 +49,19 @@
         <a:argument name="action">Replace</a:argument>
       </a:arguments>
     </a:operation>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>
+        ancestor::*:choice[1][self::*:seg/@source]
+      </a:xpathCondition>
+      <a:arguments>
+        <!-- Note: We cannot use position() in the construction of the combobox values, so we count the preceding siblings. -->
+        <a:argument name="externalParams"><![CDATA[keep=${ask('Choose text to keep:', combobox, (${xpath_eval(string-join(for $el in ancestor::*:choice/*:seg return concat("'", count($el/preceding-sibling::*)+1, "':'", $el/@source, ': ', $el, "'"), ';'))}), '1')}]]></a:argument>
+        <a:argument name="script">${framework(oXbytao)}/xsl/unwrap_choice.xsl</a:argument>
+        <a:argument name="sourceLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="targetLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="action">Replace</a:argument>
+      </a:arguments>
+    </a:operation>
   </a:operations>
   <a:accessKey/>
 </a:authorAction>
