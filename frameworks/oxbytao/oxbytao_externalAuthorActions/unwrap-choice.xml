@@ -51,7 +51,7 @@
     </a:operation>
     <a:operation id="XSLTOperation">
       <a:xpathCondition>
-        ancestor::*:choice[1][self::*:seg/@source]
+        ancestor::*:choice[1][*:seg/@source]
       </a:xpathCondition>
       <a:arguments>
         <!-- Note: We cannot use position() in the construction of the combobox values, so we count the preceding siblings. -->

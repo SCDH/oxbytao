@@ -1,5 +1,10 @@
 # Change log #
 
+## 0.6.2 ##
+
+- fix `unwrap.choice` for unwrapping `choice/seg[@source]` from
+  multiple recensions editing
+
 ## 0.6.1 ##
 
 - extended `unwrap.choice` for unwrapping `choice/seg[@source]` from
