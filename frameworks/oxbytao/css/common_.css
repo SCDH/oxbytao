@@ -1,3 +1,4 @@
 @import "${framework(TEI P5)}/xml/tei/css/tei_oxygen.css";
 @import "common.css";
 @import "common-project.css";
+@import "personal.css";
