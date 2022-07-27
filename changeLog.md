@@ -1,5 +1,9 @@
 # Change log #
 
+## 0.6.3 ##
+
+- added personal.css to be overriden for personal styles
+
 ## 0.6.2 ##
 
 - fix `unwrap.choice` for unwrapping `choice/seg[@source]` from
