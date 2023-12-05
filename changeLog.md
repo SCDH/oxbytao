@@ -1,5 +1,10 @@
 # Change log #
 
+## 0.7.0
+
+- added sel.tag action to the CSS for the `<span>` element and remove
+  other displaying of the analytical tag in the `@ana` attribute
+
 ## 0.6.3 ##
 
 - added personal.css to be overriden for personal styles
