@@ -7,7 +7,7 @@
 
 Install from [https://scdh.github.io/oxbytao/descriptor.xml](https://scdh.github.io/oxbytao/descriptor.xml).
 
-STATE: development, experimental
+STATE: in production
 
 ## About oXbytao ##
 
