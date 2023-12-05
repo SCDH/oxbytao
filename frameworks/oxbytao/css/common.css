@@ -110,13 +110,11 @@ spanGrp > span {
 }
 
 span[from]:before {
-    content: oxy_button(actionID, "highlight.referenced", transparent, true) " " attr(ana);
-    margin-right: 0.5em;
+    content: oxy_button(actionID, "highlight.referenced", transparent, true) oxy_button(actionID, "sel.tag", transparent, true);
 }
 
 span[to]:before {
-    content: oxy_button(actionID, "highlight.referenced", transparent, true) " " attr(ana);
-    margin-right: 0.5em;
+    content: oxy_button(actionID, "highlight.referenced", transparent, true) oxy_button(actionID, "sel.tag", transparent, true);
 }
 
 
