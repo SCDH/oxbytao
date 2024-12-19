@@ -1,6 +1,6 @@
 # Change log #
 
-## 0.8.1+2
+## 0.8.1-3
 
 - update deployment on github
 
