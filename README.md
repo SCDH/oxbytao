@@ -46,17 +46,25 @@ the following link instead:
 
 ### CSS ###
 
-oXbytao introduces the CSS styles **Collapsed** and **Expanded**, and
-the additional styles **+Anchors**, **+Header**, **+Comments**, and
-**+Edit**. These can be extended on a project level without writing
-your own framework. There are some empty CSS files in the framework,
-that can simply be replaced by an XML catalog:
+oXbytao introduces new CSS styles, which inherit from the *Basic* style:
+- **Collapsed**: hide details like the critical apparatus
+- **Expanded**: show all details
+And it offers the additional styles: 
+- **+Anchors**: show `<anchor>` elements as ⚓
+- **+Header**: show/hide header
+- **+Comments**: show/hide notes
+- **+Diplomatic**: show `<pb>` as linebreaks vs. inline `/`
+- **+Edit**: offer editing of various attributes etc.
+
+These can be extended on a project level without writing your own
+framework. There are some empty CSS files in the framework, that can
+simply be replaced by an XML catalog:
 
 - **common-project.css**: local CSS definitions used by all the styles
   in oXbytao. You can use this for adding your own project-wide font
   definitions etc.
 - **collapsed-project.css**: local CSS definitions used in *Collapsed*
-  style
+  style.
 - **expanded-project.css**: local CSS definitions used in *Expanded*
   style
 - **anchors-project.css**: local CSS definitions used in *+Anchors*
@@ -65,6 +73,8 @@ that can simply be replaced by an XML catalog:
   style
 - **note-project.css**: local CSS definitions used in *+Comments*
   style
+- **diplomatic-project.css**: local CSS definitions used in
+  *+Diplomatic* style
 - **edit-project.css**: local CSS definitions used in *+Edit* style
 
 
