@@ -20,7 +20,14 @@ jobs:
           cache: maven
 
       - name: build with maven
-        run: ./mvnw -Drevision=${{github.ref_name}} -Dchangelist="" -Drelease.url="https://github.com/SCDH/oxbytao/releases/download/${{ github.ref_name }}/" --batch-mode --update-snapshots package
+        run: ./mvnw -Drevision=${{github.ref_name}} -Dchangelist="" -Drelease.url="https://github.com/SCDH/oxbytao/releases/download/${{ github.ref_name }}/" --batch-mode --update-snapshots verify
+
+      - name: store oxygen framework descriptor file
+        uses: actions/upload-artifact@v4
+        with:
+          name: oxygen-framework-descriptor
+          path: target/descriptor.xml
+          retention-days: 1
 
       - name: create release
         uses: actions/create-release@v1
@@ -43,3 +50,27 @@ jobs:
           asset_path: target/oxbytao-${{ github.ref_name }}-package.zip
           asset_name: oxbytao-${{ github.ref_name }}-package.zip
           asset_content_type: application/zip
+
+  pages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+
+      - name: Download descriptor artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: oxygen-framework-descriptor
+
+      - name: create directory for github pages
+        run: mkdir -p public
+
+      - name: copy descriptor file
+        run: cp target/descriptor.xml public/
+
+      - name: Deploy descriptor file on Github pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
