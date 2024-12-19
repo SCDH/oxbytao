@@ -5,7 +5,7 @@
 
     <groupId>de.wwu.scdh.oxbytao</groupId>
     <artifactId>oxbytao</artifactId>
-    <version>0.7.0</version>
+    <version>${revision}${changelist}</version>
 
     <name>oXbytao</name>
     <url>https://github.com/scdh/oxbytao</url>
@@ -45,6 +45,7 @@
 	    <groupId>net.sf.saxon</groupId>
 	    <artifactId>Saxon-HE</artifactId>
 	    <version>${saxon.version}</version>
+	    <scope>test</scope>
 	</dependency>
     </dependencies>
 
