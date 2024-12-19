@@ -1,5 +1,9 @@
 # Change log #
 
+## 0.8.0
+
+- Added optional CSS style `+Comments` for hiding/displaying comments.
+
 ## 0.7.0
 
 - added sel.tag action to the CSS for the `<span>` element and remove
