@@ -1,5 +1,12 @@
 # Change log #
 
+## 0.9.0
+
+- Added optional CSS style `+Diplomatic` used for switching the
+  display of `<lb>` and `<pb>` elements
+- Removed showing/hiding `<note>` elements from the collapsed and
+  expanded styles, because we have that in **+Comments**.
+
 ## 0.8.1-5
 
 - update deployment on github
