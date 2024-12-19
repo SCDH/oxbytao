@@ -5,7 +5,11 @@
 
 ## tl;dr ##
 
-Install from [https://scdh.github.io/oxbytao/descriptor.xml](https://scdh.github.io/oxbytao/descriptor.xml).
+Install from
+
+```
+https://scdh.github.io/oxbytao/descriptor.xml
+```
 
 STATE: in production
 
