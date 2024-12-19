@@ -7,8 +7,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v2
 
