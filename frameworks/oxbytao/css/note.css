@@ -1,5 +1,5 @@
 note, witDetail {
-    display: block;
+    display: block !important;
     background-color: yellow;
-    -oxy-display-tags: default;
+    -oxy-display-tags: none;
 }

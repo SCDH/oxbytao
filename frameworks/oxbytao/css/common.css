@@ -90,6 +90,11 @@ listApp > app > rdg:after {
     color: red;
 }
 
+/* notes are hidden. Use +Comments to unhide them. */
+note {
+    display: none;
+}
+
 noteGrp {
     display: block;
 }

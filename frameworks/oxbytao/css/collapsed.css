@@ -20,18 +20,6 @@ app:has(lem:empty) {
     display: none;
 }
 
-note {
-    display: none;
-}
-
-note:before {
-    display: inline !important;
-    content: "¹";
-    color: blue;
-    background-color: lightgray;
-    -oxy-display-tags: none;
-}
-
 choice {
     -oxy-display-tags: none;
     color: gray;
