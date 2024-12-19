@@ -19,11 +19,8 @@ jobs:
           distribution: 'adopt'
           cache: maven
 
-      - name: run maven to get ediarum
-        run: mvn --batch-mode --update-snapshots generate-sources
-
-      - name: run maven
-        run: mvn --batch-mode --update-snapshots package
+      - name: build with maven
+        run: ./mvnw -Drevision=${{github.ref_name}} -Dchangelist="" -Drelease.url="https://github.com/SCDH/oxbytao/releases/download/${{ github.ref_name }}/" --batch-mode --update-snapshots package
 
       - name: create release
         uses: actions/create-release@v1
