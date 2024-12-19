@@ -1,5 +1,9 @@
 # Change log #
 
+## 0.8.1
+
+- update deployment on github
+
 ## 0.8.0
 
 - Added optional CSS style `+Comments` for hiding/displaying comments.
