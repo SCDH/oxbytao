@@ -9,6 +9,7 @@
 
     <name>oXbytao</name>
     <url>https://github.com/scdh/oxbytao</url>
+    <description>oXbytao offers further add-ons to oXbytei, hence the ending of the name: ao is Add-Ons.</description>
 
     <developers>
 	<developer>
@@ -37,6 +38,7 @@
     </scm>
 
     <properties>
+      <release.url/>
 	<saxon.version>10.2</saxon.version>
     </properties>
 
@@ -75,37 +77,53 @@
 		</executions>
 	    </plugin>
 
-	    <plugin>
-		<groupId>org.codehaus.mojo</groupId>
-		<artifactId>xml-maven-plugin</artifactId>
-		<version>1.0.2</version>
-		<executions>
-		    <execution>
-			<goals>
-			    <goal>transform</goal>
-			</goals>
-		    </execution>
-		</executions>
-		<configuration>
-		    <transformationSets>
-			<!-- make a package descriptor using information from this pom.xml -->
-			<transformationSet>
-			    <dir>${project.basedir}</dir>
-			    <includes>
-				<include>pom.xml</include>
-			    </includes>
-			    <stylesheet>pages/descriptor.xsl</stylesheet>
-			</transformationSet>
-		    </transformationSets>
-		</configuration>
-		<dependencies>
-		    <dependency>
-			<groupId>net.sf.saxon</groupId>
-			<artifactId>Saxon-HE</artifactId>
-			<version>${saxon.version}</version>
-		    </dependency>
-		</dependencies>
-	    </plugin>
+            <plugin>
+              <artifactId>maven-resources-plugin</artifactId>
+              <version>3.0.2</version>
+              <executions>
+                <execution>
+                  <id>properties-to-oxygen-descriptor</id>
+                  <phase>generate-resources</phase>
+                  <goals>
+                    <goal>copy-resources</goal>
+                  </goals>
+                  <configuration>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
+                    <resources>
+                      <resource>
+                        <directory>${project.basedir}</directory>
+                        <includes>
+                          <include>descriptor.xml</include>
+                        </includes>
+                        <filtering>true</filtering>
+                      </resource>
+                    </resources>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-antrun-plugin</artifactId>
+              <version>3.1.0</version>
+              <executions>
+                <!-- let's have a license property -->
+                <execution>
+                  <id>read-license</id>
+                  <phase>generate-sources</phase>
+                  <goals>
+                    <goal>run</goal>
+                  </goals>
+                  <configuration>
+                    <target>
+                      <loadfile property="license" srcFile="LICENSE"/>
+                    </target>
+                    <exportAntProperties>true</exportAntProperties>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
 
 	</plugins>
     </build>
