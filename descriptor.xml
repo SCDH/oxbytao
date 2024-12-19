@@ -1,45 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xt:extensions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xmlns:xt="http://www.oxygenxml.com/ns/extension"
-               xsi:schemaLocation="http://www.oxygenxml.com/ns/extension http://www.oxygenxml.com/ns/extension/extensions.xsd">
-   <xt:extension id="oxbytao">
-      <xt:location href="https://github.com/SCDH/oxbytao/releases/download/0.7.0/oxbytao-0.7.0-package.zip"/>
-      <xt:version>0.7.0</xt:version>
-      <xt:oxy_version>23.1+</xt:oxy_version>
+<xt:extensions xmlns:xt="http://www.oxygenxml.com/ns/extension"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.oxygenxml.com/ns/extension http://www.oxygenxml.com/ns/extension/extensions.xsd">
+   <xt:extension xmlns:xt="http://www.oxygenxml.com/ns/extension"
+      id="oxbytao">
+      <xt:location href="https://github.com/SCDH/oxbytao/releases/download/0.8.6/oxbytao-0.8.6-package.zip"/>
+      <xt:version>0.8.6</xt:version>
+      <xt:oxy_version>17.0+</xt:oxy_version>
       <xt:type>framework</xt:type>
       <xt:author>Christian Lück</xt:author>
       <xt:name>oXbytao</xt:name>
-      <xt:description xmlns="http://www.w3.org/1999/xhtml">
-         <html>
+      <xt:description>
+         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
-               <title>oXbytao framework</title>
+               <title>oXbytao</title>
             </head>
             <body>
                <div>
-                  <p>oXbytao is <a href="https://github.com/SCDH/oxbytei">
-                        <b>oXbyt</b>ei</a> with <b>a</b>dd-<b>o</b>ons. It is an &lt;oXygen/&gt; framework for editing TEI documents,
-									developed at SCDH, Westfälische Wilhelms-Universität Münster.</p>
-                  <p>Visit the <a href="https://github.com/SCDH/oxbytao/releases/tag/0.7.0">release page</a> to see what's new.</p>
-                  <p>Copyright (c) 2021, 2022 Christian Lück</p>
-                  <p>This program is free software: you can redistribute it and/or
-									modify it under the terms of the GNU General Public License as
-									published by the Free Software Foundation, either version 3 of
-									the License, or (at your option) any later version.<br/> This
-									program is distributed in the hope that it will be useful, but
-									WITHOUT ANY WARRANTY; without even the implied warranty of
-									MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-									General Public License for more details.<br/> You should have
-									received a copy of the GNU General Public License along with
-									this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>
+                  <p>oXbytao offers further add-ons to oXbytei, hence the ending of the name: ao is Add-Ons.</p>
+                  <p> For more details see <a
+                  href="https://github.com/scdh/oxbytao">https://github.com/scdh/oxbytao</a>
                   </p>
-               </div>
+                  <p>This program is free software: you can
+                  redistribute it and/or modify it under the terms of
+                  the GNU General Public License as published by the
+                  Free Software Foundation, either version 3 of the
+                  License, or (at your option) any later version.<br/>
+                  This program is distributed in the hope that it will
+                  be useful, but WITHOUT ANY WARRANTY; without even
+                  the implied warranty of MERCHANTABILITY or FITNESS
+                  FOR A PARTICULAR PURPOSE. See the GNU General Public
+                  License for more details.<br/> You should have
+                  received a copy of the GNU General Public License
+                  along with this program. If not, see <a
+                  href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>
+                  </p>
+	       </div>
             </body>
          </html>
       </xt:description>
-      <xt:license><![CDATA[                    GNU GENERAL PUBLIC LICENSE
+      <xt:license><![CDATA[
+                    GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
- Copyright (C) 2007 Free Software Foundation, Inc. &lt;https://fsf.org/&gt;
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 
@@ -669,8 +672,8 @@ to attach them to the start of each source file to most effectively
 state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
-    &lt;one line to give the program's name and a brief idea of what it does.&gt;
-    Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+    <one line to give the program's name and a brief idea of what it does.>
+    Copyright (C) <year>  <name of author>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -683,14 +686,14 @@ the "copyright" line and a pointer to where the full notice is found.
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 Also add information on how to contact you by electronic and paper mail.
 
   If the program does terminal interaction, make it output a short
 notice like this when it starts in an interactive mode:
 
-    &lt;program&gt;  Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+    <program>  Copyright (C) <year>  <name of author>
     This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
     This is free software, and you are welcome to redistribute it
     under certain conditions; type `show c' for details.
@@ -702,14 +705,15 @@ might be different; for a GUI interface, you would use an "about box".
   You should also get your employer (if you work as a programmer) or school,
 if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU GPL, see
-&lt;https://www.gnu.org/licenses/&gt;.
+<https://www.gnu.org/licenses/>.
 
   The GNU General Public License does not permit incorporating your program
 into proprietary programs.  If your program is a subroutine library, you
 may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
-&lt;https://www.gnu.org/licenses/why-not-lgpl.html&gt;.
+<https://www.gnu.org/licenses/why-not-lgpl.html>.
+
 ]]></xt:license>
    </xt:extension>
 </xt:extensions>
