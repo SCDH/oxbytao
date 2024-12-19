@@ -66,8 +66,11 @@ jobs:
       - name: create directory for github pages
         run: mkdir -p public
 
+      - name: Display structure of downloaded files
+        run: ls -R
+
       - name: copy descriptor file
-        run: cp target/descriptor.xml public/
+        run: cp descriptor.xml public/
 
       - name: Deploy descriptor file on Github pages
         uses: peaceiris/actions-gh-pages@v4
