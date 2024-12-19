@@ -6,6 +6,33 @@ teiHeader > * {
     display: none;
 }
 
+pb,
+lb {
+    display: inline;
+    -oxy-display-tags: none;
+}
+
+pb {
+    content: " [" attr(n) "] ";
+}
+
+lb {
+    content: " / ";
+}
+
+lb:before,
+lb:after {
+    display: none !important;
+}
+
+lb:before {
+    display: none;
+}
+
+sourceDesc > listWit witness {
+    display: block;
+}
+
 app {
     display: inline;
 }
