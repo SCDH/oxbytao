@@ -1,3 +1,7 @@
+pb {
+    content: " [n: " oxy_textfield(edit, "@n", columns, 5) "] ";
+}
+
 /* make @wit editable */
 lem:before,
 rdg:before,
