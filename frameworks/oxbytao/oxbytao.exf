@@ -30,6 +30,10 @@
         <separator anchor="highlight.referenced"/>
         <addAction anchor="highlight.referenced" id="corr"/>
         <addAction anchor="highlight.referenced" id="sic"/>
+        <addAction anchor="highlight.referenced" id="reg"/>
+        <addAction anchor="highlight.referenced" id="orig"/>
+        <addAction anchor="highlight.referenced" id="abbr"/>
+        <addAction anchor="highlight.referenced" id="expan"/>
         <addAction anchor="highlight.referenced" id="wrap.choice"/>
         <addAction anchor="highlight.referenced" id="unwrap.choice"/>
         <separator anchor="annotate"/>
@@ -57,6 +61,10 @@
         <separator/>
         <addAction id="corr"/>
         <addAction id="sic"/>
+        <addAction id="reg"/>
+        <addAction id="orig"/>
+        <addAction id="abbr"/>
+        <addAction id="expan"/>
         <addAction id="wrap.choice"/>
         <addAction id="unwrap.choice"/>
         <separator/>
