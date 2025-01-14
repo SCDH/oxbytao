@@ -2,10 +2,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:oxy="http://www.oxygenxml.com/ns/author/xpath-extension-functions"
-    xmlns="http://www.tei-c.org/ns/1.0"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0"
-    exclude-result-prefixes="xs oxy"
-    version="2.0">
+    xmlns="http://www.tei-c.org/ns/1.0" xpath-default-namespace="http://www.tei-c.org/ns/1.0"
+    exclude-result-prefixes="xs oxy" version="2.0">
 
     <xsl:param name="keep" as="xs:string" required="yes"/>
 
@@ -14,7 +12,7 @@
         <xsl:apply-templates select="choice"/>
     </xsl:template>
 
-    <xsl:template match="choice[child::corr]|choice[child::sic]">
+    <xsl:template match="choice[child::corr] | choice[child::sic]">
         <xsl:choose>
             <xsl:when test="exists(sic) and $keep eq 'sic'">
                 <xsl:copy-of select="sic"/>
@@ -23,7 +21,40 @@
                 <xsl:copy-of select="corr"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:message terminate="yes">ERROR: '<xsl:value-of select="$keep"/>' does not exist. Aborting operation</xsl:message>
+                <xsl:message terminate="yes">ERROR: '<xsl:value-of select="$keep"/>' does not exist.
+                    Aborting operation</xsl:message>
+                <xsl:copy-of select="."/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:template match="choice[child::reg] | choice[child::orig]">
+        <xsl:choose>
+            <xsl:when test="exists(orig) and $keep eq 'orig'">
+                <xsl:copy-of select="orig"/>
+            </xsl:when>
+            <xsl:when test="exists(reg) and $keep eq 'reg'">
+                <xsl:copy-of select="reg"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message terminate="yes">ERROR: '<xsl:value-of select="$keep"/>' does not exist.
+                    Aborting operation</xsl:message>
+                <xsl:copy-of select="."/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:template match="choice[child::expan] | choice[child::abbr]">
+        <xsl:choose>
+            <xsl:when test="exists(abbr) and $keep eq 'abbr'">
+                <xsl:copy-of select="abbr"/>
+            </xsl:when>
+            <xsl:when test="exists(expan) and $keep eq 'expan'">
+                <xsl:copy-of select="expan"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message terminate="yes">ERROR: '<xsl:value-of select="$keep"/>' does not exist.
+                    Aborting operation</xsl:message>
                 <xsl:copy-of select="."/>
             </xsl:otherwise>
         </xsl:choose>
@@ -35,7 +66,8 @@
                 <xsl:copy-of select="child::*[number($keep)]"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:message terminate="yes">ERROR: element no <xsl:value-of select="$keep"/> does not exist. Aborting operation</xsl:message>
+                <xsl:message terminate="yes">ERROR: element no <xsl:value-of select="$keep"/> does
+                    not exist. Aborting operation</xsl:message>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -46,7 +78,8 @@
                 <xsl:copy-of select="child::*[number($keep)]/node()"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:message terminate="yes">ERROR: element no <xsl:value-of select="$keep"/> does not exist. Aborting operation</xsl:message>
+                <xsl:message terminate="yes">ERROR: element no <xsl:value-of select="$keep"/> does
+                    not exist. Aborting operation</xsl:message>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -55,18 +88,22 @@
         <xsl:choose>
             <xsl:when test="exists(sic/app/*[number($keep)])">
                 <app>
-                    <lem><xsl:copy-of select="sic/app/*[number($keep)]/(*|text())"/></lem>
+                    <lem>
+                        <xsl:copy-of select="sic/app/*[number($keep)]/(* | text())"/>
+                    </lem>
                     <xsl:copy-of select="sic/app/*[position() ne number($keep)]"/>
                 </app>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:message terminate="yes">ERROR: reading no <xsl:value-of select="$keep"/> does not exist. Aborting operation</xsl:message>
+                <xsl:message terminate="yes">ERROR: reading no <xsl:value-of select="$keep"/> does
+                    not exist. Aborting operation</xsl:message>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
     <xsl:template match="*">
-        <xsl:message terminate="yes">ERROR: Context: '<xsl:value-of select="local-name()"/>': No template found. Aborting operation</xsl:message>
+        <xsl:message terminate="yes">ERROR: Context: '<xsl:value-of select="local-name()"/>': No
+            template found. Aborting operation</xsl:message>
         <xsl:copy-of select="."/>
     </xsl:template>
 

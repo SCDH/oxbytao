@@ -19,6 +19,10 @@
       <a:xpathCondition>
         self::*:corr[not(parent::*:choice)]|
         self::*:sic[not(parent::*:choice)]|
+        self::*:reg[not(parent::*:choice)]|
+        self::*:orig[not(parent::*:choice)]|
+        self::*:expan[not(parent::*:choice)]|
+        self::*:abbr[not(parent::*:choice)]|
         self::*:unclear[not(parent::*:choice)]
       </a:xpathCondition>
       <a:arguments>

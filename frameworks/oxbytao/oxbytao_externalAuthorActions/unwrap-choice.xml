@@ -38,6 +38,32 @@
     </a:operation>
     <a:operation id="XSLTOperation">
       <a:xpathCondition>
+        ancestor::*:choice[1][*:reg] |
+        ancestor::*:choice[1][*:orig]
+      </a:xpathCondition>
+      <a:arguments>
+        <a:argument name="externalParams"><![CDATA[keep=${ask('Choose text to keep:', combobox, (${xpath_eval(concat("'reg':'reg: ", ancestor::*:choice/*:reg, "'", ';', "'orig':'orig: ", ancestor::*:choice/*:orig, "'"))}), 'reg')}]]></a:argument>
+        <a:argument name="script">${framework(oXbytao)}/xsl/unwrap_choice.xsl</a:argument>
+        <a:argument name="sourceLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="targetLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="action">Replace</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>
+        ancestor::*:choice[1][*:abbr] |
+        ancestor::*:choice[1][*:expan]
+      </a:xpathCondition>
+      <a:arguments>
+        <a:argument name="externalParams"><![CDATA[keep=${ask('Choose text to keep:', combobox, (${xpath_eval(concat("'expan':'expan: ", ancestor::*:choice/*:expan, "'", ';', "'abbr':'abbr: ", ancestor::*:choice/*:abbr, "'"))}), 'expan')}]]></a:argument>
+        <a:argument name="script">${framework(oXbytao)}/xsl/unwrap_choice.xsl</a:argument>
+        <a:argument name="sourceLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="targetLocation">ancestor::*:choice[1]</a:argument>
+        <a:argument name="action">Replace</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>
         ancestor::*:choice[1][*:unclear]
       </a:xpathCondition>
       <a:arguments>
