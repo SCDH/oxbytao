@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.tei-c.org/ns/1.0"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="reg">
+  <a:name>Regularization</a:name>
+  <a:description>&lt;reg&gt; (regularization) contains a reading which has been regularized or normalized in some sense.</a:description>
+  <a:smallIconPath href="${framework(oXbytao)}/images/reg-16.png"/>
+  <a:largeIconPath href="${framework(oXbytao)}/images/reg-24.png"/>
+  <a:operations>
+    <a:operation id="ToggleSurroundWithElementOperation">
+      <a:xpathCondition>true()</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="element"><reg xmlns="http://www.tei-c.org/ns/1.0"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:accessKey/>
+</a:authorAction>
