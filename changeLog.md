@@ -1,5 +1,12 @@
 # Change log #
 
+## 0.10.0
+
+- new actions
+  - for `<abbr>` and `<expan>`
+  - for `<orig>` and `<reg>`
+- use wrap and un-wrap actions to make and handle those pairs
+
 ## 0.9.0
 
 - Added optional CSS style `+Diplomatic` used for switching the
