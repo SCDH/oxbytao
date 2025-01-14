@@ -9,10 +9,10 @@
   <a:smallIconPath href="${framework(oXbytao)}/images/corr-16.png"/>
   <a:largeIconPath href="${framework(oXbytao)}/images/corr-24.png"/>
   <a:operations>
-    <a:operation id="SurroundWithFragmentOperation">
+    <a:operation id="ToggleSurroundWithElementOperation">
       <a:xpathCondition>true()</a:xpathCondition>
       <a:arguments>
-        <a:argument name="fragment"><corr xmlns="http://www.tei-c.org/ns/1.0"/></a:argument>
+        <a:argument name="element"><corr xmlns="http://www.tei-c.org/ns/1.0"/></a:argument>
       </a:arguments>
     </a:operation>
   </a:operations>
