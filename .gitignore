@@ -10,6 +10,7 @@ images/*.xcf
 
 # symlink to jar file for development
 frameworks/oxbytao/*.jar
+frameworks/oxbytei
 
 # property files for log4j etc.
 /*.properties
