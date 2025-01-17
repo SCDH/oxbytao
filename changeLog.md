@@ -1,5 +1,9 @@
 # Change log #
 
+## 0.11.0
+
+- split toolbars like in oXbytei 0.21.0
+
 ## 0.10.0
 
 - new actions
