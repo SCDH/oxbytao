@@ -24,19 +24,24 @@
     </css>
 
     <toolbars>
-      <toolbar>
+      <toolbar name="Critical Apparatus">
         <addAction anchor="sel.wit" position="before" id="reading"/>
         <addAction anchor="sel.wit" id="del.app"/>
-        <separator anchor="highlight.referenced"/>
-        <addAction anchor="highlight.referenced" id="corr"/>
-        <addAction anchor="highlight.referenced" id="sic"/>
-        <addAction anchor="highlight.referenced" id="reg"/>
-        <addAction anchor="highlight.referenced" id="orig"/>
-        <addAction anchor="highlight.referenced" id="abbr"/>
-        <addAction anchor="highlight.referenced" id="expan"/>
-        <addAction anchor="highlight.referenced" id="wrap.choice"/>
-        <addAction anchor="highlight.referenced" id="unwrap.choice"/>
-        <separator anchor="annotate"/>
+        <separator />
+        <addAction  id="corr"/>
+        <addAction  id="sic"/>
+        <separator />
+        <addAction  id="reg"/>
+        <addAction  id="orig"/>
+        <separator />
+        <addAction  id="abbr"/>
+        <addAction  id="expan"/>
+        <separator />
+        <addAction  id="wrap.choice"/>
+        <addAction  id="unwrap.choice"/>
+      </toolbar>
+
+      <toolbar name="Editorial">
         <addAction anchor="annotate" id="note"/>
       </toolbar>
     </toolbars>
