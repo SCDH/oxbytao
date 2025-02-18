@@ -105,7 +105,8 @@ noteGrp > note {
     background-color: white;
 }
 
-noteGrp > note[targetEnd]:before, noteGrp[targetEnd]:before {
+noteGrp > note[targetEnd]:before,
+noteGrp[targetEnd]:before {
     -oxy-link: attr(targetEnd);
     content: "↤";
     color: blue;
@@ -163,5 +164,5 @@ taxonomy[xml|id]:before,
 category[xml|id]:before,
 interpGrp[xml|id]:before,
 interp[xml|id]:before {
-    content:"#" attr(xml|id) ": ";
+    content: "#" attr(xml|id) ": ";
 }
