@@ -1,7 +1,14 @@
-lb, pb {
-    display: block;
+/* the diplomatic view starts a new line on every lb */
+lb:before,
+pb:before {
+    content: "\A" !important;
 }
 
 lb {
-    content: "" !important;
+    content: "";
+}
+
+lb[n] {
+    content: attr(n) " ";
+    color: silver;
 }

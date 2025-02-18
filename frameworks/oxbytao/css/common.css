@@ -20,15 +20,6 @@ lb {
     content: " / ";
 }
 
-lb:before,
-lb:after {
-    display: none !important;
-}
-
-lb:before {
-    display: none;
-}
-
 sourceDesc > listWit witness {
     display: block;
 }
