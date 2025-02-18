@@ -1,3 +1,6 @@
+@namespace xml "http://www.w3.org/XML/1998/namespace";
+
+
 pb {
     content: " [n: " oxy_textfield(edit, "@n", columns, 5) "] ";
 }
@@ -15,4 +18,11 @@ witDetail:before {
       labels, oxy_xpath("let $witnesses := /TEI/teiHeader//witness/@xml:id ! concat('#', .) return string-join($witnesses, ',')")
       )
     "] " !important;
+}
+
+taxonomy:before,
+category:before,
+interpGrp:before,
+interp:before {
+    content: oxy_xpath("local-name(.)") " #" oxy_textfield(edit, "@xml:id", columns, 30, tooltip, "Identifier, only latin letters and cifers 0-9, minus and underscore are allowed.") ": " !important;
 }

@@ -1,4 +1,43 @@
+@namespace xml "http://www.w3.org/XML/1998/namespace";
+
 teiHeader,
 teiHeader > * {
     display: block;
+}
+
+/* taxonomies and interpGrps */
+
+teiHeader interpGrp {
+    display: block;
+}
+
+teiHeader interpGrp > interp {
+    display: block;
+}
+
+teiHeader taxonomy,
+teiHeader category,
+teiHeader interpGrp,
+teiHeader interp {
+    padding-left: 2em;
+}
+
+teiHeader taxonomy {
+    border: 1px solid silver;
+}
+
+teiHeader taxonomy:before,
+teiHeader category:before,
+teiHeader interpGrp:before,
+teiHeader interp:before {
+    content: oxy_xpath("local-name(.)") ": ";
+    font-weight: 900;
+}
+
+/* show IDs of taxonomies and categories */
+teiHeader taxonomy[xml|id]:before,
+teiHeader category[xml|id]:before,
+teiHeader interpGrp[xml|id]:before,
+teiHeader interp[xml|id]:before {
+    content: oxy_xpath("local-name(.)") " #" attr(xml|id) ": ";
 }
