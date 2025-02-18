@@ -1,5 +1,10 @@
 # Change log #
 
+## 0.11.1
+
+- make **+diplomatic** style less error prone and more extensible
+- improved CSS for taxonomies in the encoding description 
+
 ## 0.11.0
 
 - split toolbars like in oXbytei 0.21.0
