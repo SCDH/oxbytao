@@ -20,6 +20,7 @@
       <addCss path="${framework(oXbytao)}/css/header_.css" title="+Header" alternate="true"/>
       <addCss path="${framework(oXbytao)}/css/note_.css" title="+Comments" alternate="true"/>
       <addCss path="${framework(oXbytao)}/css/diplomatic_.css" title="+Diplomatic" alternate="true"/>
+      <addCss path="${framework(oXbytao)}/css/expensive_.css" title="+Expensive" alternate="true"/>
       <addCss path="${framework(oXbytao)}/css/edit_.css" title="+Edit" alternate="true"/>
     </css>
 
