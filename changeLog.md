@@ -1,5 +1,12 @@
 # Change log #
 
+## 0.12.0
+
+- introduce optional CSS style `+Expensive` for expensive things like
+  evaluating XPath expressions, pointers etc. Reason: For long texts,
+  it turned out, that there are some CSS features, that slow down
+  oXygen. In order to make them optional, this CSS style was added.
+
 ## 0.11.1
 
 - make **+diplomatic** style less error prone and more extensible
