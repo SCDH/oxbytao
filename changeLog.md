@@ -10,7 +10,7 @@
 ## 0.11.1
 
 - make **+diplomatic** style less error prone and more extensible
-- improved CSS for taxonomies in the encoding description 
+- improved CSS for taxonomies in the encoding description
 
 ## 0.11.0
 
