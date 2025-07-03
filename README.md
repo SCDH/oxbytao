@@ -59,6 +59,7 @@ And it offers the additional styles:
 - **+Comments**: show/hide notes
 - **+Diplomatic**: show `<pb>` as linebreaks vs. inline `/`
 - **+Edit**: offer editing of various attributes etc.
+- **+Expensive**: turn on/off computationally expensive styles
 
 These can be extended on a project level without writing your own
 framework. There are some empty CSS files in the framework, that can
@@ -80,7 +81,7 @@ simply be replaced by an XML catalog:
 - **diplomatic-project.css**: local CSS definitions used in
   *+Diplomatic* style
 - **edit-project.css**: local CSS definitions used in *+Edit* style
-
+- **expensive-project.css**: local CSS used in *+Expensive* style
 
 
 Note: If you want to re-define styles already defined, then you can
